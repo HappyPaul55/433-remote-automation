@@ -1,8 +1,10 @@
 import RPi.GPIO as GPIO
 import csv
+import sys
 import time
 
-PIN = 17
+PIN = int(sys.argv[1])
+FILE = sys.argv[2]
 PLAYBACK = [] # [[time, 1_OR_0, ...], ...]
 PLAYBACK_SIZE = 0
 
@@ -12,7 +14,7 @@ if __name__ == '__main__':
     GPIO.setup(PIN, GPIO.OUT)
 
     print '**Reading Playback**'
-    with open('rage.csv', 'rb') as csvfile:
+    with open(FILE, 'rb') as csvfile:
         rage = csv.reader(csvfile)
         lastTime = 0
         for row in rage:

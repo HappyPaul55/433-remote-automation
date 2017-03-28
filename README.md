@@ -2,6 +2,7 @@
 By Paul Happy Hutchinson
 
 __Note:__ This has only been tested with a Raspberry Pi 3B but it will likely work on all Raspberry Pi's and more.
+
 __Note:__ This only works when the code the remote transmits is always the same (but you can still use it to recieve/record anything message allowing you to reverse engineer if needs be)
 
 ## Background
